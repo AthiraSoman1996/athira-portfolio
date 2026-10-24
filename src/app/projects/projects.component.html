@@ -1,0 +1,39 @@
+<section id="projects" class="portfolio-section projects-section">
+
+	<div class="section-container projects-container">
+
+		<div class="section-header">
+			<span class="section-number">05</span>
+
+			<div class="section-title">
+				<h2>PROJECT EXPERIENCE</h2>
+				<span class="title-line"></span>
+			</div>
+		</div>
+
+		<div class="projects-grid">
+			@for (project of projects; track project.title) {
+				<article class="project-card">
+					<div class="project-heading">
+						<span
+							class="material-symbols-rounded project-icon"
+							aria-hidden="true"
+						>{{ project.icon }}</span>
+
+						<h3>{{ project.title }}</h3>
+					</div>
+
+					<p>{{ project.description }}</p>
+
+					<div class="project-tags">
+						@for (technology of project.technologies; track technology) {
+							<span>{{ technology }}</span>
+						}
+					</div>
+				</article>
+			}
+		</div>
+
+	</div>
+
+</section>

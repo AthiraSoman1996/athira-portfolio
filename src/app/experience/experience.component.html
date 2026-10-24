@@ -1,0 +1,81 @@
+<section id="experience" class="portfolio-section experience-section">
+  <div class="section-container">
+    <!-- ========================= -->
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <!-- ========================= -->
+
+    <div class="section-header">
+      <span class="section-number">03</span>
+
+      <div class="section-title">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <span class="title-line"></span>
+      </div>
+    </div>
+
+    <div class="experience-grid">
+      <article class="experience-card" *ngFor="let experience of experiences">
+        <!-- Top -->
+        <div class="experience-top">
+          <div class="company-info">
+            <div class="company-logo">
+              <span
+                class="material-symbols-rounded company-icon"
+                aria-hidden="true"
+              >
+                business
+              </span>
+            </div>
+
+            <div class="company-details">
+              <h3>
+                {{ experience.company }}
+              </h3>
+
+              <p>
+                {{ experience.role }}
+              </p>
+            </div>
+          </div>
+
+          <span class="duration">
+            {{ experience.duration }}
+          </span>
+        </div>
+
+        <!-- Description -->
+
+        <p class="experience-description">
+          {{ experience.description }}
+        </p>
+      </article>
+    </div>
+
+    <!-- ========================= -->
+    <!-- DOMAINS -->
+    <!-- ========================= -->
+
+    <div class="domains-section">
+      <div class="section-header domain-header">
+        <span class="section-number">04</span>
+
+        <div class="section-title">
+          <h2>DOMAINS I'VE WORKED IN</h2>
+          <span class="title-line"></span>
+        </div>
+      </div>
+
+      <div class="domains-grid">
+        <div class="domain-item" *ngFor="let domain of domains">
+          <span class="material-symbols-rounded domain-icon">
+            {{ domain.icon }}
+          </span>
+
+          <span class="domain-name">
+            {{ domain.name }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,98 @@
+<nav class="navbar">
+  <div class="navbar-inner">
+    <!-- =========================
+         BRAND
+    ========================== -->
+
+    <a class="brand" href="#home" (click)="navigate('home', $event)">
+      <div class="brand-mark">A</div>
+
+      <div class="brand-info">
+        <span class="brand-name"> Athira Soman </span>
+
+        <span class="brand-role"> Front-End Developer </span>
+      </div>
+    </a>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <div class="nav-links" [class.mobile-open]="menuOpen">
+      @for (item of navItems; track item.id) {
+        <a
+          [href]="item.href"
+          [class.active]="isActive(item.id)"
+          (click)="scrollToSection(item.id, $event)"
+        >
+          {{ item.label }}
+        </a>
+      }
+
+      <!-- Mobile Let's Connect -->
+
+      <a
+        class="mobile-connect"
+        href="#contact"
+        (click)="navigate('contact', $event)"
+      >
+        <span>Let's Connect</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <!-- =========================
+         RIGHT SIDE
+    ========================== -->
+
+    <div class="nav-actions">
+      <!-- Theme -->
+
+      <button
+        class="theme-button"
+        type="button"
+        (click)="toggleTheme()"
+        [attr.aria-label]="
+          isDarkMode ? 'Switch to light theme' : 'Switch to dark theme'
+        "
+      >
+        @if (isDarkMode) {
+          ☾
+        } @else {
+          ☀
+        }
+      </button>
+
+      <!-- Desktop Connect -->
+
+      <a
+        class="connect-button"
+        href="#contact"
+        (click)="navigate('contact', $event)"
+      >
+        <span>Let's Connect</span>
+
+        <span class="arrow"> → </span>
+      </a>
+
+      <!-- Mobile Menu -->
+
+      <button
+        class="menu-button"
+        type="button"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen"
+        aria-label="Toggle navigation"
+      >
+        @if (!menuOpen) {
+          <span></span>
+          <span></span>
+          <span></span>
+        } @else {
+          <span class="close-line line-one"></span>
+          <span class="close-line line-two"></span>
+        }
+      </button>
+    </div>
+  </div>
+</nav>

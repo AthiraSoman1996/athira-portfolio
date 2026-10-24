@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+/* =====================================================
+  DARK THEME
+===================================================== */
+
+:root {
+  --container-width: 1360px;
+  --section-padding: 60px;
+  --page-padding: 32px;
+
+  --bg-primary: #03101d;
+  --text-primary: #f4f7fb;
+  --text-secondary: #9aaec4;
+  --accent-blue: #3d8bfd;
+  --border-color: rgba(80, 140, 200, 0.14);
+  --card-background: rgba(10, 29, 48, 0.65);
+  --card-border: rgba(80, 140, 200, 0.18);
+
+  --bg-secondary: #071827;
+  --text-muted: #7f93a8;
+  --heading-color: #f4f7fb;
+  --accent: var(--accent-blue);
+  --accent-color: var(--accent-blue);
+  --accent-hover: #5b9cff;
+  --section-border: var(--border-color);
+  --bg-card: var(--card-background);
+
+  --navbar-bg: rgba(3, 14, 27, 0.94);
+
+  --particle-color: rgba(52, 132, 220, 0.28);
+  --particle-dot: rgba(55, 145, 255, 0.8);
+
+  --button-text: #ffffff;
+
+  --hero-subtitle: #a8c8ef;
+
+  --shadow-color: rgba(20, 100, 220, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =====================================================
+  LIGHT THEME
+===================================================== */
+
+:root.light-theme,
+body.light-theme,
+.light-theme {
+  --bg-primary: #f5f8fc;
+  --bg-secondary: #ffffff;
+  --text-primary: #182337;
+  --text-secondary: #64748b;
+  --accent-blue: #1769e0;
+  --border-color: rgba(40, 80, 120, 0.12);
+  --card-background: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(40, 90, 150, 0.16);
+
+  --bg-card: var(--card-background);
+  --text-muted: #718398;
+  --heading-color: #101a2b;
+  --accent: var(--accent-blue);
+  --accent-color: var(--accent-blue);
+  --accent-hover: #0e58b7;
+  --section-border: var(--border-color);
+
+  --navbar-bg: rgba(255, 255, 255, 0.92);
+
+  --particle-color: rgba(48, 104, 160, 0.12);
+  --particle-dot: rgba(42, 120, 205, 0.42);
+
+  --button-text: #ffffff;
+
+  --hero-subtitle: #3c78b9;
+
+  --shadow-color: rgba(40, 100, 170, 0.1);
+}
+
+/* =========================================
+   BASIC PAGE
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+
+  font-family: Inter, sans-serif;
+
+  background: var(--bg-primary);
+
+  color: var(--text-primary);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+
+  overflow-x: hidden;
+}
+
+.portfolio-section {
+  width: 100%;
+  padding: var(--section-padding) var(--page-padding);
+}
+
+.section-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --page-padding: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+    --page-padding: 20px;
+  }
+}

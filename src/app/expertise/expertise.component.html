@@ -1,0 +1,60 @@
+<section id="expertise" class="portfolio-section expertise-section">
+  <div class="section-container expertise-container">
+    <!-- =========================
+         SECTION HEADER
+    ========================== -->
+    <div class="section-header">
+      <span class="section-number">02</span>
+
+      <div class="section-title-wrapper">
+        <h2>UI &amp; FRONT-END EXPERTISE</h2>
+
+        <span class="title-line"></span>
+      </div>
+    </div>
+
+    <!-- =========================
+         EXPERTISE CARDS
+    ========================== -->
+    <div class="expertise-grid">
+      @for (item of expertiseItems; track item.title) {
+        <article class="expertise-card">
+          @if (item.icon === "angular") {
+            <div class="expertise-icon angular-icon">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <path d="M32 6L54 14L50 43L32 58L14 43L10 14L32 6Z"></path>
+                <path
+                  class="angular-mark"
+                  d="M32 15L21 40H26L28 35H36L38 40H43L32 15ZM30 31L32 25L34 31H30Z"
+                ></path>
+              </svg>
+            </div>
+          } @else {
+            <div class="expertise-icon">
+              <span class="material-symbols-rounded" aria-hidden="true">{{
+                item.icon
+              }}</span>
+            </div>
+          }
+
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      }
+    </div>
+
+    <!-- =========================
+         TECHNOLOGY STACK
+    ========================== -->
+
+    <div class="technology-stack">
+      <div class="stack-title">TECHNOLOGY STACK</div>
+
+      <div class="stack-list">
+        @for (technology of technologyStack; track technology) {
+          <span>{{ technology }}</span>
+        }
+      </div>
+    </div>
+  </div>
+</section>

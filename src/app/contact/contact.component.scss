@@ -1,0 +1,253 @@
+:host {
+  display: block;
+}
+
+.contact-section {
+  padding: 22px var(--page-padding) 0;
+  color: var(--text-primary);
+  border-top: 1px solid var(--section-border);
+}
+
+.contact-container {
+  width: 100%;
+}
+
+.development-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  padding: 27px 62px;
+  border: 1px solid var(--accent-blue);
+  border-radius: 13px;
+  background: linear-gradient(110deg, rgba(4, 24, 62, 0.82), var(--card-background));
+  box-shadow: 0 12px 30px rgba(0, 60, 150, 0.08);
+}
+
+.development-copy {
+  max-width: 760px;
+}
+
+.development-eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: #a8c8ef;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.development-copy h2 {
+  margin: 0 0 8px;
+  color: var(--text-primary);
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.development-copy p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.development-topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.development-topics span {
+  padding: 11px 17px;
+  border: 1px solid rgba(103, 169, 255, 0.6);
+  border-radius: 24px;
+  color: var(--text-primary);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+:host-context(.light-theme) .development-panel {
+  background: linear-gradient(110deg, #e7f0fc, #ffffff);
+}
+
+:host-context(.light-theme) .development-eyebrow {
+  color: #245b9e;
+}
+
+:host-context(.light-theme) .development-topics span {
+  border-color: rgba(23, 105, 224, 0.45);
+}
+
+.contact-content {
+  padding: 31px 0 37px;
+}
+
+.contact-heading {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 28px;
+}
+
+.section-number {
+  flex-shrink: 0;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--text-primary);
+}
+
+.title-line {
+  width: 48px;
+  height: 1px;
+  background: var(--accent-blue);
+  opacity: 0.65;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.contact-copy h3 {
+  margin: 0 0 11px;
+  font-size: 30px;
+  line-height: 1.15;
+}
+
+.contact-copy p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.email-button,
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.email-button {
+  gap: 16px;
+  min-width: 216px;
+  height: 64px;
+  padding: 0 25px;
+  border-radius: 13px;
+  background: var(--accent-blue);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.email-button .material-symbols-rounded {
+  font-size: 25px;
+}
+
+.social-button {
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 700;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.social-button .material-symbols-rounded {
+  font-size: 25px;
+}
+
+@media (max-width: 900px) {
+  .development-panel,
+  .contact-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .development-panel {
+    padding: 25px 28px;
+  }
+
+  .development-topics {
+    justify-content: flex-start;
+  }
+
+  .contact-content {
+    padding: 30px 0 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-heading {
+    gap: 14px;
+  }
+
+  .section-title h2 {
+    font-size: 14px;
+  }
+
+  .title-line {
+    width: 30px;
+  }
+
+  .development-copy h2,
+  .contact-copy h3 {
+    font-size: 24px;
+  }
+
+  .development-topics span {
+    font-size: 12px;
+  }
+
+  .contact-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .email-button {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .social-button {
+    width: 52px;
+    height: 52px;
+  }
+}

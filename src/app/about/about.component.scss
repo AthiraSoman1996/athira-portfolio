@@ -1,0 +1,230 @@
+.about-section {
+  position: relative;
+  width: 100%;
+  padding: 36px var(--page-padding) 45px;
+
+  color: var(--text-primary);
+
+  border-top: 1px solid var(--section-border);
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  margin-bottom: 20px;
+}
+
+.section-number {
+  font-size: 14px;
+  font-weight: 500;
+
+  color: var(--accent);
+
+  min-width: 22px;
+}
+
+.heading-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+
+  color: var(--text-primary);
+}
+
+.heading-line {
+  width: 42px;
+  height: 1px;
+
+  background: var(--accent);
+}
+
+/* =========================================
+   ABOUT LAYOUT
+========================================= */
+
+.about-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(300px, 0.75fr);
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+/* =========================================
+   ABOUT TEXT
+========================================= */
+
+.about-text {
+  max-width: 690px;
+}
+
+.about-text p {
+  margin: 0 0 12px;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+
+  color: var(--text-secondary);
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   QUOTE CARD
+========================================= */
+
+.about-quote {
+  position: relative;
+
+  min-height: 105px;
+
+  padding: 25px 30px 25px 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  border: 1px solid var(--card-border);
+
+  border-radius: 10px;
+
+  background: var(--card-background);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Quote icon */
+
+.quote-icon {
+  position: absolute;
+
+  top: 15px;
+  left: 28px;
+
+  font-size: 48px;
+
+  line-height: 1;
+
+  font-family: Georgia, serif;
+
+  color: var(--accent);
+}
+
+.about-quote p {
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+
+  color: var(--text-primary);
+
+  border-left: 2px solid var(--accent);
+
+  padding-left: 12px;
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.about-quote {
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.about-quote:hover {
+  border-color: rgba(74, 144, 255, 0.45);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .about-quote {
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 32px var(--page-padding) 38px;
+  }
+
+  .section-heading {
+    gap: 14px;
+
+    margin-bottom: 18px;
+  }
+
+  .section-number {
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 12px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .heading-line {
+    width: 30px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .about-quote {
+    padding: 24px 20px 24px 48px;
+  }
+
+  .about-quote p {
+    font-size: 14px;
+  }
+
+  .quote-icon {
+    left: 20px;
+  }
+}

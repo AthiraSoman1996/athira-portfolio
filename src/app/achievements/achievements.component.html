@@ -1,0 +1,40 @@
+<section id="achievements" class="portfolio-section achievements-section">
+
+  <div class="section-container achievements-container">
+
+    <div class="section-header">
+      <span class="section-number">06</span>
+
+      <div class="section-title">
+        <h2>ACHIEVEMENTS</h2>
+        <span class="title-line"></span>
+      </div>
+    </div>
+
+    <div class="achievements-grid">
+      @for (achievement of achievements; track achievement.title) {
+        <article class="achievement-card">
+          <div class="achievement-icon">
+            <span
+              class="material-symbols-rounded"
+              aria-hidden="true"
+            >{{ achievement.icon }}</span>
+          </div>
+
+          <div class="achievement-content">
+            <h3>{{ achievement.title }}</h3>
+
+            <p>
+              @if (achievement.organization) {
+                <span>{{ achievement.organization }} &mdash; </span>
+              }
+              {{ achievement.description }}
+            </p>
+          </div>
+        </article>
+      }
+    </div>
+
+  </div>
+
+</section>

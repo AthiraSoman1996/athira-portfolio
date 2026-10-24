@@ -1,0 +1,30 @@
+<section id="about" class="portfolio-section about-section">
+  <div class="section-container">
+    <!-- Section heading -->
+    <div class="section-heading">
+      <span class="section-number">01</span>
+
+      <div class="heading-content">
+        <span class="section-title">ABOUT ME</span>
+        <span class="heading-line"></span>
+      </div>
+    </div>
+
+    <!-- Main About Content -->
+    <div class="about-layout">
+      <!-- Left -->
+      <div class="about-text">
+        @for (paragraph of paragraphs; track paragraph) {
+          <p>{{ paragraph }}</p>
+        }
+      </div>
+
+      <!-- Right Quote -->
+      <div class="about-quote">
+        <span class="quote-icon">“</span>
+
+        <p>{{ quote }}</p>
+      </div>
+    </div>
+  </div>
+</section>

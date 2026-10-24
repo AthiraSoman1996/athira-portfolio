@@ -1,0 +1,72 @@
+<section id="home" class="portfolio-section home-section">
+  <div class="section-container home-container">
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">HELLO, I'M</div>
+
+      <h1>Athira <span>Soman</span></h1>
+
+      <h2>Senior Angular Developer</h2>
+
+      <p class="hero-description">
+        Front-End Developer with 8+ years of experience building scalable
+        enterprise web applications using modern Angular technologies.
+      </p>
+
+      <!-- ACTIONS -->
+      <div class="hero-actions">
+        <a class="primary-button" href="#experience">
+          {{ actions.primary }}
+          <span>→</span>
+        </a>
+
+        <a
+          class="secondary-button"
+          href="assets/Athira%20Soman.pdf"
+          download="Athira-Soman-Resume.pdf"
+        >
+          <span class="download-icon" aria-hidden="true">↓</span>
+          <span>{{ actions.secondary }}</span>
+        </a>
+      </div>
+
+      <!-- CAREER STATS -->
+      <div class="hero-stats">
+        @for (stat of stats; track stat.label) {
+          @if (!$first) {
+            <div class="stat-divider"></div>
+          }
+
+          <div class="stat">
+            <strong>{{ stat.value }}</strong>
+            <span>
+              {{ stat.label }}
+              @if (stat.detail) {
+                <br />{{ stat.detail }}
+              }
+            </span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- RIGHT PHOTO -->
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <img src="assets/images/athira.jpg" alt="Athira Soman" />
+      </div>
+
+      <div class="availability">
+        <span class="status-dot"></span>
+        Available for opportunities
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL INDICATOR -->
+  <div class="scroll-indicator">
+    <div class="scroll-icon">↓</div>
+
+    <span>Scroll Down</span>
+  </div>
+</section>

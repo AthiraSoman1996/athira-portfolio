@@ -1,0 +1,72 @@
+<section id="contact" class="contact-section">
+
+  <div class="section-container contact-container">
+
+    <article class="development-panel">
+      <div class="development-copy">
+        <span class="development-eyebrow">{{ development.eyebrow }}</span>
+        <h2>{{ development.title }}</h2>
+        <p>{{ development.description }}</p>
+      </div>
+
+      <div class="development-topics">
+        @for (topic of development.topics; track topic) {
+          <span>{{ topic }}</span>
+        }
+      </div>
+    </article>
+
+    <div class="contact-content">
+      <div class="contact-heading">
+        <span class="section-number">07</span>
+
+        <div class="section-title">
+          <h2>{{ contact.eyebrow }}</h2>
+          <span class="title-line"></span>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-copy">
+          <h3>{{ contact.title }}</h3>
+          <p>{{ contact.description }}</p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="email-button" [href]="contact.email">
+            <span>Email Me</span>
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </a>
+
+          <a
+            class="social-button"
+            [href]="contact.linkedin"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >in</a>
+
+          <a
+            class="social-button"
+            [href]="contact.github"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <span class="material-symbols-rounded" aria-hidden="true">code</span>
+          </a>
+
+          <a
+            class="social-button"
+            [href]="contact.email"
+            aria-label="Email"
+          >
+            <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
