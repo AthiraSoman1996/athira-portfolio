@@ -29,12 +29,12 @@ jobs:
         run: npm ci
 
       - name: Build Angular
-        run: npm run build -- --base-href /athira-portfolio/
+        run: npx ng build --base-href=/athira-portfolio/
 
       - name: Upload build output
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist/athira-portfolio
+          path: dist/athira-portfolio/browser
 
   deploy:
     needs: build
